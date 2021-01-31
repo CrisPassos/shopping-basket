@@ -18,22 +18,15 @@ export const productReducer = (
         saveItems: [...state.saveItems, action.payload],
       };
     }
+
+    case ProductActionsTypes.SumItems: {
+      debugger
+      return {
+        ...state,
+        amount: state.saveItems.reduce((a, b) => +a + +b.price, 0)
+      };
+    }
     default:
       return state;
   }
 }
-
-
-
-// const productReducer = createReducer(
-//   initialState,
-//   on(loadProducts, state => ({ ...state })),
-//   on(dataProduct, state => ({ ...state, response: state.response })),
-//   on(addItem, state => ({ ...state, saveItems: [...state.saveItems] })),
-//   on(removeItem, state => ({ ...state, response: state.response })),
-//   on(errorProduct, state => ({ ...state })),
-// );
-
-// export function reducer(state: State | undefined, action: Action) {
-//   return productReducer(state, action);
-// }

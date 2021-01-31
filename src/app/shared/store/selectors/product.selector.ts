@@ -15,3 +15,8 @@ export const selectSelectedItens = createSelector(
   productState,
   (state: IProductState) => state.saveItems
 );
+
+export const selectAmount = createSelector(
+  productState,
+  (state: IProductState) => state.amount
+);

@@ -6,6 +6,7 @@ export enum ProductActionsTypes {
   GetProductsSuccess = '[Product] Keep All Produts',
   AddItem = '[Add Item] Add Produts',
   RemoveItem = '[Remove Item] Remove Produts',
+  SumItems = '[Sum] Amount Princes',
   Error = '[Product Error] Any Kind of Error',
 }
 
@@ -28,8 +29,12 @@ export class RemoveItem implements Action {
   constructor(public payload: IProduct) { }
 }
 
+export class SumItems implements Action {
+  public readonly type = ProductActionsTypes.SumItems;
+}
+
 export class Error implements Action {
   public readonly type = ProductActionsTypes.Error;
 }
 
-export type ProductActions = GetProducts | GetProductsSuccess | AddItem | RemoveItem | Error;
+export type ProductActions = GetProducts | GetProductsSuccess | AddItem | RemoveItem | Error | SumItems;

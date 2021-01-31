@@ -4,13 +4,13 @@ import { CommonModule } from '@angular/common';
 
 import { SharedModule } from './../shared/shared.module';
 import { PageRoutingModule } from './page-routing.module';
-import { BasketComponent } from './basket/basket.component';
+import { CartComponent } from './cart/cart.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { ProductEffects } from './../shared/store/effects/product.effect';
 
 
 @NgModule({
-  declarations: [BasketComponent, ShoppingComponent],
+  declarations: [CartComponent, ShoppingComponent],
   imports: [
     CommonModule,
     SharedModule,
@@ -18,6 +18,6 @@ import { ProductEffects } from './../shared/store/effects/product.effect';
 
     EffectsModule.forRoot([ProductEffects])
   ],
-  exports: [BasketComponent, ShoppingComponent],
+  exports: [CartComponent, ShoppingComponent],
 })
 export class PagesModule { }

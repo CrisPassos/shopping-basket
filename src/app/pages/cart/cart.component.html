@@ -1,0 +1,9 @@
+<div *ngFor="let item of (cartItens$ | async)" class="align-card">
+  <div class="card">
+    <app-products [data]="item"></app-products>
+  </div>
+</div>
+
+<div>
+  Amount: {{ amount | async }}
+</div>

@@ -12,12 +12,4 @@ export class ProductService {
   getAllProducts() {
     return this.httpClient.get(this.api);
   }
-
-  addProductBasket(): void {
-
-  }
-
-  protected removeProductBasket(): void {
-
-  }
 }
