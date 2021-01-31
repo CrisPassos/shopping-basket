@@ -1,9 +1,32 @@
+@import '../../shared/styles/color';
 
 .btn {
-  background-color: DodgerBlue;
-  border: none;
-  color: white;
-  padding: 12px 16px;
-  font-size: 16px;
+  float: right;
+  background-color: $white;
   cursor: pointer;
 }
+
+.icon:hover {
+  background: $blue-background;
+}
+
+
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+.svg-icon {
+  width: 2.2em;
+  height: 2.2em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: $blue;
+}
+
+.svg-icon circle {
+  stroke: $blue;
+  stroke-width: 1;
+}
+
