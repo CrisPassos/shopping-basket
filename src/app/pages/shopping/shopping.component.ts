@@ -15,6 +15,7 @@ import { ProductActionsTypes } from 'src/app/shared/store/action/product.action'
 export class ShoppingComponent implements OnInit {
 
   products$ = this.store.pipe(select(selectProduct));
+  show = false;
 
   constructor(private store: Store<IAppState>) {
   }
@@ -25,6 +26,11 @@ export class ShoppingComponent implements OnInit {
 
   protected addItem(item: IProduct) {
     this.store.dispatch(new AddItem(item));
+    this.show = true;
+
+    setTimeout(() => {
+      this.show = false;
+    }, 2000);
   }
 
 }

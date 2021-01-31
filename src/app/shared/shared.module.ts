@@ -4,9 +4,10 @@ import { ProductsComponent } from './components/products/products.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastComponent } from './components/toast/toast.component';
 
 @NgModule({
-  declarations: [ProductsComponent],
+  declarations: [ProductsComponent, ToastComponent],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     ReactiveFormsModule,
     RouterModule,
-    ProductsComponent
+    ProductsComponent,
+    ToastComponent
   ]
 })
 export class SharedModule { }

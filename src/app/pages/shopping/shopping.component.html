@@ -5,3 +5,7 @@
     <button class="btn" (click)="addItem(item)">ADD</button>
   </div>
 </div>
+
+<div *ngIf="show">
+  <app-toast [message]="'Your item has been added to the cart!'"></app-toast>
+</div>
