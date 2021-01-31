@@ -1,0 +1,10 @@
+@import '../../shared/styles/color';
+
+.footer {
+  text-align: end;
+  border-top: .1rem solid $grey;
+}
+
+.footer p {
+  padding: 0 1rem 0 0 ;
+}

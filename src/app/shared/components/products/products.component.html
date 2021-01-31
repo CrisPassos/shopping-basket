@@ -1,0 +1,11 @@
+<div class="image text-align-center">
+  <img src="{{data?.photo}}" alt="{{data?.name}}" width="100" height="100"
+    [attr.aria-label]="'Product Picture for' + data?.name">
+</div>
+
+<div>
+  <p><b>{{data?.name | uppercase}}</b></p>
+</div>
+<div>
+  <p>Price: <b>{{data?.price}}</b></p>
+</div>
