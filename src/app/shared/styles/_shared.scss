@@ -5,14 +5,23 @@
 }
 
 .card {
-  width: auto;
-  height: 15rem;
-  margin: 1rem 0 1rem 1rem;
-  padding: .6rem;
-  transition: 0.3s;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin: 1rem;
+  display: flex;
+  overflow: hidden;
+  border-radius: .5rem;
+  flex-direction: column;
+  border: .1rem solid $grey;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
+.card__content {
+  padding: .5rem;
+}
+
+.card__img {
+  object-fit: cover;
+  height: 30vh;
+}
 
 .align-card {
   display: inline-block;
@@ -21,7 +30,7 @@
 
 .link {
   display: inline-block;
-  padding: .2rem 0;
+  padding: 1rem 0 0 0;
 }
 
 .link a {
