@@ -19,7 +19,7 @@ import { ToastComponent } from './components/toast/toast.component';
     ReactiveFormsModule,
     RouterModule,
     ProductsComponent,
-    ToastComponent
+    ToastComponent,
   ]
 })
 export class SharedModule { }

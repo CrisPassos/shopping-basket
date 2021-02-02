@@ -1,7 +1,11 @@
 @import '../styles/color';
 
-.text-align-center {
+.text-center {
   text-align: center;
+}
+
+.text-end {
+  text-align: end;
 }
 
 .card {
@@ -36,3 +40,42 @@
 .link a {
   color: $blue;
 }
+
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+.btn {
+  float: right;
+  background-color: $white;
+  cursor: pointer;
+}
+
+.icon:hover {
+  background: $blue-background;
+}
+
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+.svg-icon {
+  width: 2.2em;
+  height: 2.2em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: $blue;
+}
+
+.svg-icon circle {
+  stroke: $blue;
+  stroke-width: 1;
+}
+
+
+

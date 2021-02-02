@@ -1,6 +1,7 @@
+import { IProduct } from './../../shared/models/product';
 import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
-import { SumItems } from 'src/app/shared/store/action/product.action';
+import { RemoveItem, SumItems } from 'src/app/shared/store/action/product.action';
 import { selectAmount, selectSelectedItens } from 'src/app/shared/store/selectors/product.selector';
 import { IAppState } from 'src/app/shared/store/states/app.state';
 
@@ -17,18 +18,12 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.store.dispatch(new SumItems());
-    this.amountItems();
   }
 
-  amountItems(): void {
-    // this.cartItens$.subscribe(i => {
-    //   debugger
-    //   let sum: number;
-    //   i.forEach(p => sum = sum + p.price);
+  removeItem(item: IProduct): void {
+    this.store.dispatch(new RemoveItem(item));
 
-    //   this.amount = sum;
-    // })
+    this.store.dispatch(new SumItems());
   }
-
 
 }

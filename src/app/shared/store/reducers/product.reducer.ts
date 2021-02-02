@@ -20,12 +20,21 @@ export const productReducer = (
     }
 
     case ProductActionsTypes.SumItems: {
-      debugger
       return {
         ...state,
         amount: state.saveItems.reduce((a, b) => +a + +b.price, 0)
       };
     }
+
+    case ProductActionsTypes.RemoveItem: {
+      return {
+        ...state,
+        saveItems: state.saveItems.filter(item => item !== action.payload),
+      };
+    }
+
+
+
     default:
       return state;
   }
