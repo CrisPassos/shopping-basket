@@ -1,7 +1,7 @@
 <img src="{{data?.photo}}" alt="{{data?.name}}" class="card__img"
   [attr.aria-label]="'Product Picture for' + data?.name">
 
-<div class="card__content ">
+<div data-test="container">
   <p class="label"><b>{{data?.name | uppercase}}</b></p>
   <p class="price"><small>€</small> <b>{{data?.price}}</b></p>
 </div>
